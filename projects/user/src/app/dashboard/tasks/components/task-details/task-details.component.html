@@ -1,0 +1,13 @@
+<div class="container mt-5" *ngIf="task">
+    <div class="imageBox" *ngIf="task.image">
+        <img [src]="task?.image" alt="" class="w-100">
+    </div>
+    <div class="d-flex justify-content-between align-items-baseline my-3">
+        <h1 class="card-title ">{{task.title}}</h1>
+        <button mat-raised-button color="warn" (click)="completeTask(task._id)"  >Complete</button>
+    </div>
+    <p class="card-subtitle mb-2 text-muted">Dead-Line Date : {{task.deadline}}</p>
+    <hr>
+    <p class="card-text">{{task.description}}</p>
+
+</div>
